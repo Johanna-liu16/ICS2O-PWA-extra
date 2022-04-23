@@ -25,13 +25,14 @@ function myButtonClicked() {
 /**
  * This function calculates volume of a sphere.
  */
-function calculate () {
+function calculate() {
   // input
   const radius = parseInt(document.getElementById("radius-of-pyramid").value)
 
   // process
-  const volume = ( 4/3 * Math.PI * Math.pow(radius, 3))
+  const volume = (4 / 3) * Math.PI * Math.pow(radius, 3)
 
   // output
-  document.getElementById("answers").innerHTML = 'Volume is: ' + volume.toFixed(2) + ' cm³'
+  document.getElementById("answers").innerHTML =
+    "Volume is: " + volume.toFixed(2) + " cm³"
 }
