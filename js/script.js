@@ -10,8 +10,8 @@
  * Check servie worker.
  */
 if (navigator.serviceWorker) {
-  navigator.serviceWorker.register("/ICS2O-PWA-Test/sw.js", {
-    scope: "/ICS2O-PWA-Test/",
+  navigator.serviceWorker.register("/ICS2O-PWA-extra/sw.js", {
+    scope: "/ICS2O-PWA-extra/",
   })
 }
 
@@ -23,16 +23,15 @@ function myButtonClicked() {
 }
 
 /**
- * This function converts fahrenheit.
+ * This function calculates volume of a sphere.
  */
-function calculate() {
+function calculate () {
   // input
-  const F = parseInt(document.getElementById("fahrenheit-degrees").value)
+  const radius = parseInt(document.getElementById("radius-of-pyramid").value)
 
   // process
-  const celsius = ((F - 32) * 5) / 9
+  const volume = ( 4/3 * Math.PI * Math.pow(radius, 3))
 
   // output
-  document.getElementById("answers").innerHTML =
-    "The degrees in celsius is: " + celsius.toFixed(2) + " °C"
+  document.getElementById("answers").innerHTML = 'Volume is: ' + volume.toFixed(2) + ' cm³'
 }
